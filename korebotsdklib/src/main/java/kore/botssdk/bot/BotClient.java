@@ -2,7 +2,6 @@ package kore.botssdk.bot;
 
 import android.content.Context;
 import android.util.Log;
-
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -169,8 +168,9 @@ public class BotClient {
         if (msg != null && !msg.isEmpty()) {
 
             RestResponse.BotPayLoad botPayLoad = new RestResponse.BotPayLoad();
-
             RestResponse.BotMessage botMessage = new RestResponse.BotMessage(msg);
+            if(customData == null)
+                customData = new RestResponse.BotCustomData();
             customData.put("botToken",getAccessToken());
             botMessage.setCustomData(customData);
             botPayLoad.setMessage(botMessage);
