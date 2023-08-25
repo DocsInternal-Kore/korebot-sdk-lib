@@ -1,4 +1,4 @@
-package kore.botssdk.speechtotext;/*
+/*
 package kore.botssdk.speechtotext;
 
 import android.media.AudioFormat;

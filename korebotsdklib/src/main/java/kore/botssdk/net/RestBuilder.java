@@ -77,7 +77,7 @@ public class RestBuilder {
                     .readTimeout(60, TimeUnit.SECONDS)
                     .addInterceptor(interceptor)
                     .dispatcher(dispatcher)
-                    .sslSocketFactory(SSLHelper.getSSLContextWithCertificate(mContext, Server.KORE_BOT_SERVER_URL).getSocketFactory(), SSLHelper.systemDefaultTrustManager())
+                    .sslSocketFactory(SSLHelper.getSSLContextWithCertificate(mContext, SDKConfiguration.Server.KORE_BOT_SERVER_URL).getSocketFactory(), SSLHelper.systemDefaultTrustManager())
                     //.interceptors(KoreRequestInterceptor.getInstance(getApplicationContext()))
                     //.authenticator(new KoraRequestAuthenticator(KORestBuilder.mContext))
                     .build();
